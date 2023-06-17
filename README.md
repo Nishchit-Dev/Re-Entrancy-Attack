@@ -1,13 +1,10 @@
-# Sample Hardhat Project
+# Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates a Re-Entrancy Attack using Hardhat. It comes with a Attack and EtherStore contract, a test for that contract, and a script that deploys that contract.
 
-Try running some of the following tasks:
+# Use following Commands to Execute and Test Attack
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+npx hardhat compile
+npx hardhat test --network ganache
 ```
