@@ -12,7 +12,6 @@ module.exports = {
       url:process.env.localChainUrl,
       accounts:[process.env.Alice,process.env.Bob,process.env.Rat]
     },
-
   },
   paths: {
     sources: "./contracts",

@@ -61,24 +61,24 @@ describe("Re-Entrancy Attack", function () {
       console.log(AttackerAddress);
     });
   });
-  describe("Alice => 2 Ether Vulnerable Contract", async () => {
-    it("Sending 2 ether", async () => {
+  describe("Alice => 5 Ether Vulnerable Contract", async () => {
+    it("Sending ether", async () => {
       const EtherStore = await ethers.getContractAt(
         "contracts/EtherStore.sol:EtherStore",
         EtherStoreAddress
       );
-      let amount = await ethers.parseEther("2.0");
+      let amount = await ethers.parseEther("1.0");
       const tx = await EtherStore.connect(Alice).deposit({ value: amount });
     });
   });
-  describe("Bob => 3 Ether Vulnerable Contract ", () => {
-    it("Sending 3 ether", async () => {
+  describe("Bob => 1 Ether Vulnerable Contract ", () => {
+    it("Sending ether", async () => {
       const EtherStore = await ethers.getContractAt(
         "contracts/EtherStore.sol:EtherStore",
         EtherStoreAddress
       );
 
-      let amount = await ethers.parseEther("3.0");
+      let amount = await ethers.parseEther("1.0");
       const tx = await EtherStore.connect(Bob).deposit({
         value: amount,
       });
